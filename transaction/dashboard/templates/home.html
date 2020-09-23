@@ -1,0 +1,644 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body class="fixed-sn black-skin">
+  <!-- Main Navigation -->
+  <!-- Main Navigation -->
+  <!-- Main layout -->
+    <div class="container-fluid">
+      <!-- Section: Main panel -->
+      <section class="mb-5">
+        <!-- Card -->
+        <div class="card card-cascade narrower">
+          <!-- Section: Chart -->
+          <section>
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col mr-0">
+                <!-- Card image -->
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                  <h2 class="h2-responsive mb-0">Order status</h2>
+                </div>
+                <!-- Card image -->
+              <br>
+              <div class="card-body card-body-cascade pb-0">
+                  <!-- Panel data -->
+                    <!-- First column -->
+                    <div class="col">
+                    <!-- First column -->
+                    <!-- Second column -->
+                    <!-- Second column -->
+                  </div>
+                  <!-- Panel data -->
+                </div>
+                <!-- Card content -->
+              <!-- Grid column -->
+              <!-- Grid column -->
+              <div class="col">
+                <!-- Card image -->
+                <div class="view view-cascade gradient-card-header black"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <!-- Chart -->
+                  <canvas id="chart-morning" height="250" width="730" class="chartjs-render-monitor" style="display: block; width: 711px; height: 414px;"></canvas>
+                </div>
+                <!-- Card image -->
+              </div>
+              <!-- Grid column -->
+            </div>
+            </div>
+            <!-- Grid row -->
+          </section>
+          <!-- Section: Chart -->
+        </div>
+        <!-- Card -->
+      </section>
+      <!-- Section: Main panel -->
+      <!-- Section: Chart types -->
+      <section>
+        <!-- Grid row -->
+        <div class="row mb-4">
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-4">
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">Internal Delay</h5>
+              </div>
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="lineChart" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">Sales Overview</h5>
+              </div>
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="pieChart" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">Invoices missing</h5>
+              </div>
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="barChart" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row mb-4">
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-4">
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">Delivery Chain Problem</h5>
+              </div>
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="polarChart" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">External Delay</h5>
+              </div>
+              <!-- Card image -->
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+                <canvas id="lineexternal" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue">
+                <h5 class="mb-0">Offer Missing</h5>
+              </div>
+              <!-- Card image -->
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+                <canvas id="doughnutChart" height="272" width="408" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+      </section>
+      <!-- Section: Chart types -->
+
+    </div>
+
+  <!-- Main layout -->
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../../js/bootstrap.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../../js/mdb.min.js"></script><div class="hiddendiv common"></div>
+  <!-- Custom scripts -->
+
+  <!-- Charts -->
+  <script>
+    chartIt();
+    //Main chart
+    async function chartIt() {
+    const data = await getData();
+    const ctx = document.getElementById("chart-morning").getContext('2d');
+    const myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.xs,
+        datasets: [{
+          label: "Authorization Mail Failed",
+          fillColor: false,
+          borderColor: 'rgb(255,0,0)',
+          data: data.ys1,
+        },
+        {
+          label: "Offer Failed",
+          fillColor: false,
+          borderColor: 'rgb(0, 0, 255)',
+          data: data.ys2,
+        },
+        {
+          label: "Supplier Mail Failed",
+          fillColor: false,
+          borderColor: 'rgb(0, 128, 128)',
+          data: data.ys3,
+        },
+        {
+          label: "Voucher Failed",
+          fillColor: false,
+          borderColor: 'rgb(255, 255, 255)',
+          data: data.ys4,
+        }]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: "#fff",
+          }
+        },
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: true,
+              color: "rgba(255,255,255,.25)"
+            },
+            ticks: {
+              fontColor: "#fff",
+            },
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              display: true,
+              color: "rgba(255,255,255,.25)"
+            },
+            ticks: {
+              fontColor: "#fff",
+            },
+          }],
+        }
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys1 = [];
+    const ys2 = [];
+    const ys3 = [];
+    const ys4 = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const date = column[0];
+      xs.push(date);
+      const not_authorized = column[1];
+      ys1.push(not_authorized);
+      const no_offer = column[2];
+      ys2.push(no_offer);
+      const supplier_mail = column[3];
+      ys3.push(supplier_mail);
+      const voucher_failed = column[4];
+      ys4.push(voucher_failed);
+      console.log(xs,ys1,ys2,ys3,ys4);
+    });
+    return {xs,ys1,ys2,ys3,ys4};
+    }
+
+
+  </script>
+
+  <!-- Charts 2 -->
+  <script>
+    //line
+    chartIt();
+    async function chartIt() {
+    const data = await getData();
+    const ctx = document.getElementById("lineChart").getContext('2d');
+    const myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.xs,
+        datasets: [{
+            label: "brodos.net Kiosk",
+            fillColor: false,
+            data: data.ys1,
+            borderColor: 'rgb(255, 0, 0)',
+            borderWidth: 2
+          },
+          {
+            label: "brodos.net Onlineshop",
+            fillColor: false,
+            data: data.ys2,
+            borderColor:'rgb(0, 255, 0)',
+            borderWidth: 2
+          },
+          {
+            label: "brodos.net Marketplace",
+            fillColor: false,
+            data: data.ys3,
+            borderColor: 'rgb(0,0,255)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys1 = [];
+    const ys2 = [];
+    const ys3 = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const date = column[0];
+      xs.push(date);
+      const kiosk = column[5];
+      ys1.push(kiosk)
+      const onlineshop = column[6];
+      ys2.push(onlineshop)
+      const bmp = column[7];
+      ys3.push(bmp)
+    });
+    return {xs,ys1,ys2,ys3};
+    }
+</script>
+<script>
+        //pie
+    var ctx = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ["Brodos.net Kiosk", "Brodos.net Onlineshop", "Telekom Shop", "Smarthome.de", "Shop.telekom.de"],
+        datasets: [{
+          data: [1585.1, 4588.7, 66584.95, 50421.41, 489.27],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+
+    //getData();
+    //async function getData() {
+
+    //const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/sales_overview.csv');
+    //const data = await response.text();
+
+    //const table = data.split('\n').slice(1);
+    //table.forEach(row => {
+    //  const column = row.split(',');
+    //  const date = column[0];
+    //  xs.push(date);
+    //  const kiosk = column[5];
+    //  ys1.push(kiosk)
+    //  const onlineshop = column[6];
+    //  ys2.push(onlineshop)
+    //  const bmp = column[7];
+    //  ys3.push(bmp)
+    //});
+    //return {xs,ys1,ys2,ys3};
+    //}
+
+</script>
+
+  <script>
+        //bar
+chartIt();
+    async function chartIt() {
+    const data = await getData();
+    const ctx = document.getElementById("barChart").getContext('2d');
+    const myBarChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: data.xs,
+        datasets: [{
+          label: 'Total number of missing invoices',
+          data: data.ys,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      optionss: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const webshop = column[15];
+      if (webshop) {
+      xs.push(webshop)
+      } else {
+      ;
+      }
+
+      const missing_invoice = column[16];
+      if (missing_invoice) {
+      ys.push(missing_invoice)
+      } else {
+      ;
+      }
+    });
+    return {xs,ys};
+    }
+</script>
+
+  <script>
+
+chartIt();
+    async function chartIt() {
+    const data = await getData();
+    var ctx = document.getElementById("polarChart").getContext('2d');
+    var myPolarChart = new Chart(ctx, {
+      type: 'polarArea',
+      data: {
+        labels: data.xs,
+        datasets: [{
+          data: data.ys,
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const supplier = column[13];
+      if (supplier) {
+      xs.push(supplier)
+      } else {
+        ;
+      }
+
+      const missing = column[14];
+      if (missing) {
+      ys.push(missing)
+      } else {
+        ;
+      }
+    });
+    return {xs,ys};
+    }
+
+
+</script>
+  <script>
+        //doughnut
+chartIt();
+    async function chartIt() {
+    const data = await getData();
+    var ctx = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: data.xs,
+        datasets: [{
+          data: data.ys,
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const webshop = column[17];
+      if (webshop) {
+      xs.push(webshop)
+      } else {
+       ;
+      }
+
+      const failed_count = column[18];
+      if (failed_count) {
+      ys.push(failed_count)
+      } else {
+        ;
+      }
+    });
+    return {xs,ys};
+    }
+
+</script>
+<script>
+//line
+    chartIt();
+    async function chartIt() {
+    const data = await getData();
+    const ctx = document.getElementById("lineexternal").getContext('2d');
+    const myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.xs,
+        datasets: [{
+            label: "brodos.net Kiosk",
+            fillColor: false,
+            data: data.ys1,
+            borderColor: 'rgb(255, 0, 0)',
+            borderWidth: 2
+          },
+          {
+            label: "brodos.net Onlineshop",
+            fillColor: false,
+            data: data.ys2,
+            borderColor:'rgb(0, 255, 0)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys1 = [];
+    const ys2 = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const date = column[0];
+      xs.push(date);
+      const kiosk = column[19];
+      ys1.push(kiosk)
+      const onlineshop = column[20];
+      ys2.push(onlineshop)
+
+    });
+    return {xs,ys1,ys2};
+    }
+</script>
+</body>
+{% endblock %}

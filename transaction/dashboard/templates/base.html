@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+	<script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/templates/admin-dashboard/css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/templates/admin-dashboard/css/mdb.min.css">
+
+  <!-- Your custom styles (optional) -->
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+</head>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="/">Transaction Dashboard</a>
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'internal_delay' %}">Internal Delay</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'sales_overview' %}">Sales Overview</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'invoices_missing' %}">Invoices missing</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'delivery_chain_problem' %}">Delivery Chain Problem</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'external_delay' %}">External Delay</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'offer_missing' %}">Offer Missing</a></li>
+      <!-- Dropdown -->
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+<body>
+
+
+{% if messages %}
+  {% for message in messages %}
+  <script>M.toast({html: '{{message}}', classes: 'blue rounded', displayLength: 2000});</script>
+  {% endfor %}
+  {% endif %}
+
+<br>
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+  <!-- Footer -->
+<footer class="page-footer pt-0 mt-5" style="height: 280px;">
+
+    <!-- Copyright -->
+<footer class="py-5 bg-dark text-white" style="height: 270px;">
+  <div class="container">
+    <div class="row">
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-white bg-dark" href="{% url 'sales_overview' %}">Sales Overview</a></li>
+        <li><a class="text-white bg-dark" href="{% url 'internal_delay' %}">Internal Delay</a></li>
+        <li><a class="text-white bg-dark" href="{% url 'offer_missing' %}">Offer Missing</a></li>
+        <li><a class="text-white bg-dark" href="{% url 'invoices_missing' %}">Invoices Missing</a></li>
+        <li><a class="text-white bg-dark" href="{% url 'delivery_chain_problem' %}">Delivery Chain problem</a></li>
+        <li><a class="text-white bg-dark" href="{% url 'external_delay' %}">External Delay</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-white bg-dark" href="https://confluence.brodos.net/display/MOTI/02+%7C+Processes">Processes</a></li>
+        <li><a class="text-white bg-dark" href="https://confluence.brodos.net/display/MOTI/Market+Operations+-+Transactions+Intelligence">Documentation</a></li>
+        <li><a class="text-white bg-dark" href="http://ordercontext.brodos.net/olm/ui">Order Context</a></li>
+        <li><a class="text-white bg-dark" href="https://packagetracking.brodos.net/PackageTracking/login">Tracking Context</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-white bg-dark" href="https://confluence.brodos.net/display/MOTI/Market+Operations+-+Transactions+Intelligence">Team</a></li>
+        <li><a class="text-white bg-dark" href="mailto:transaction-support@brodos.de">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+       <p class="text-muted">Brought to you by: <a class="text-muted" href="mailto:ankurparanjpe10@gmail.com">Ankur Paranjpe</a></p>
+</div>
+</footer>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+</html>

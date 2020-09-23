@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+<h1 style="text-align: center;">Internal Delay</h1>
+</div>
+      <section>
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col">
+            <!-- Card -->
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas id="lineChart" height="250" width="730" class="chartjs-render-monitor" style="display: block; width: 408px; height: 272px;"></canvas>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+          </div>
+        </div>
+      </section>
+          <!-- Grid column -->
+
+
+
+      <script>
+    //line
+    chartIt();
+    async function chartIt() {
+    const data = await getData();
+    const ctx = document.getElementById("lineChart").getContext('2d');
+    const myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.xs,
+        datasets: [{
+            label: "brodos.net Kiosk",
+            fillColor: false,
+            data: data.ys1,
+            borderColor: 'rgb(255, 0, 0)',
+            borderWidth: 2
+          },
+          {
+            label: "brodos.net Onlineshop",
+            fillColor: false,
+            data: data.ys2,
+            borderColor:'rgb(0, 255, 0)',
+            borderWidth: 2
+          },
+          {
+            label: "brodos.net Marketplace",
+            fillColor: false,
+            data: data.ys3,
+            borderColor: 'rgb(0,0,255)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    });
+}
+
+    async function getData() {
+    const xs = [];
+    const ys1 = [];
+    const ys2 = [];
+    const ys3 = [];
+
+    const response = await fetch('https://raw.githubusercontent.com/ankurparanjpe/khajana/master/khajana/morning_failed.csv');
+    const data = await response.text();
+
+    const table = data.split('\n').slice(1);
+    table.forEach(row => {
+      const column = row.split(',');
+      const date = column[0];
+      xs.push(date);
+      const kiosk = column[5];
+      ys1.push(kiosk)
+      const onlineshop = column[6];
+      ys2.push(onlineshop)
+      const bmp = column[7];
+      ys3.push(bmp)
+    });
+    return {xs,ys1,ys2,ys3};
+    }
+
+
+
+
+</script>
+{% endblock %}
