@@ -3,14 +3,14 @@ date;authorization_mail_failed;offer_failed;supplier_mail_failed;voucher_failed;
 21-08-2020;0;2;0;0;2;1;5;12;1;0;88;1;EURNIC;1;BKiosk;0;BKiosk;0;0;0;SM;130435.41
 22-08-2020;0;0;0;0;0;0;0;0;0;0;75;5;STX GmbH;1;BOnlineshop;0;BOnlineshop;0;0;0;BMarketplace;34426.82
 23-08-2020;0;0;0;0;0;0;0;0;0;0;122;1;etr GmbH;2;HOS;0;ShopTD;0;0;0;ROnlineshop;19340.75
-24-08-2020;1;2;0;0;3;1;15;9;11;709;120;5;AGI Angela Gutzeit GmbH;1;shop.telekom.de;0;Smarthome.de;0;3;0;brodos.net Onlineshop;8697.6
-25-08-2020;0;3;0;0;1;0;7;8;2;185;102;4;;;Smarthome.de;0;Telekom Shop;0;2;1;brodos.net Kiosk;6646.3
-26-08-2020;0;1;0;0;2;0;8;7;1;166;134;2;;;Telekom Shop;0;telekom_shop_express;0;1;0;shop.telekom.de;2716.43
-27-08-2020;0;2;0;1;1;1;8;7;2;175;169;3;;;Telekom Sim;0;brodos.net Marketplace;0;1;0;Rusche Fashion GmbH;747.69
-28-08-2020;0;1;0;0;2;0;8;10;3;203;117;5;;;telekom_shop_express;0;;;0;1;Aubi Modehaus;529.65
-29-08-2020;0;0;0;0;0;0;0;0;0;214;118;6;;;brodos.net Marketplace;0;;;0;0;Telekom Shop Express;121.6
-30-08-2020;0;0;0;0;0;0;0;0;0;0;164;1;;;;;;;0;0;Vodafone Onlineshop;101
-31-08-2020;1;1;1;2;4;0;18;7;11;213;185;7;;;;;;;2;2;Papedis;14.6
+24-08-2020;1;2;0;0;3;1;15;9;11;709;120;5;AG;1;ShopTD;0;SM;0;3;0;BOnlineshop;8697.6
+25-08-2020;0;3;0;0;1;0;7;8;2;185;102;4;;;SM;0;TShop;0;2;1;BKiosk;6646.3
+26-08-2020;0;1;0;0;2;0;8;7;1;166;134;2;;;TSP;0;t_s_express;0;1;0;ShopTD;2716.43
+27-08-2020;0;2;0;1;1;1;8;7;2;175;169;3;;;TKSim;0;BMarketplace;0;1;0;RSCH GmbH;747.69
+28-08-2020;0;1;0;0;2;0;8;10;3;203;117;5;;;t_s_express;0;;;0;1;ABModehaus;529.65
+29-08-2020;0;0;0;0;0;0;0;0;0;214;118;6;;;BMarketplace;0;;;0;0;TSExpress;121.6
+30-08-2020;0;0;0;0;0;0;0;0;0;0;164;1;;;;;;;0;0;VOnlineshop;101
+31-08-2020;1;1;1;2;4;0;18;7;11;213;185;7;;;;;;;2;2;Ppd;14.6
 01-09-2020;0;3;0;9;1;1;7;14;5;90;148;9;;;;;;;0;0;;
 02-09-2020;0;1;0;0;2;2;6;5;4;163;130;3;;;;;;;1;1;;
 03-09-2020;0;4;1;1;1;0;8;7;2;207;102;5;;;;;;;2;0;;
